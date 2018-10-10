@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+@font-face{
+  font-family: doge;
+  src: url("../font/DogeSans-Regular.otf");
+}
+
+
+.navbar-inverse {
+  background-color: #161616 !important;
+}
+
+body {
+  position: relative;
+  overflow: auto;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.6em;
+  background-color: #f9f9f9;
+  color: rgba(0,0,0,1);
+}
+
+#leftCol{
+  font-size: 1.2em;
+}
+
+.h2Size {
+  font-size: 1.28em;
+  /*font-family: 'Roboto Slab', serif;*/
+  margin-bottom: 0.25em;
+}
+
+a:hover{
+  background-color:#f3ffff;
+}
+
+a{
+  color: #000000;
+}
+
+.small-margin-top{
+  margin-top: 1.25em;
+}
+
+.hovermouse:hover {
+  background-color:#f3ffff;
+  cursor: help;
+}
+
+.float-right{
+  float: right;
+}
+
+.panel-body p {
+ text-align: justify;
+}
+
+.nav-headline {
+  letter-spacing: 0.5px;
+  /*font-family: 'Roboto Slab', serif;*/
+}
+
+.navhead {
+  color: #cccccc;
+}
+
+.sm-width {
+  width: 4.8em;
+}
+
+.btn-default{
+  background-color: #f9f9f9 !important;
+}
+
+.p-justify {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* tricks */
+.v-center {
+  position: relative;
+  transform: translateY(50%);
+}
+
+.v-centerA {
+  position: absolute;
+  top: 45%;
+  text-align: center;
+}
+
+
+.no-border {
+   border: none !important;
+}
+
+.no-border li {
+  border: none !important;
+}
+
+.no-border a{
+  border: none !important;
+}
+
+/*****/
+.fontFlake{
+  position:fixed;
+  top:-50px;
+  left:0px;
+  z-index:10;
+  position:block;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Zirun, Informatics, bidirectional transformations, reflective printing" />
+  <meta name="description" content="Yet Another 「Naive」 homepage" />
+  <title>Zirun Zhu's Homepage</title>
+  <meta name="rating" content="General" />
+  <meta name="author" content="Zirun Zhu / 朱子润" />
+  <meta name="copyright" content="Copyright © 2015-2018" />
+  <!-- bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/navbar-fixed-side.css" rel="stylesheet" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- my css and javascript -->
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script>
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2 col-md-2 col-lg-2 col-xl-3" id="leftCol">
+        <div class="navbar navbar-inverse navbar-fixed-side no-border" id="navbar">
+           <div class="navbar-header">
+            <!-- <a class="navbar-brand nav-headline" href="#">Zirun Zhu <span class="navhead">'s Homepage</span></a> -->
+            <div class="v-centerA" style="color: #161616;"><p>This is only a black wall.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-10 col-md-10 col-lg-10 col-xl-9" id="rightCol">
+        <section class="section" id="education">
+          <div class="float-right" style="text-align: center">
+            <a href="#" onclick="bomb()">
+              <img id="doge-img" src="img/doge.jpg" id="doge-it" class="img-circle img-responsive" alt="doge" width="100px">
+            </a>
+            <p>Zirun Zhu's<br>Homepage</p>
+          </div>
+          <h2>Education</h2>
+          <div>
+            <p class="h2Size">2014 - present</p>
+            <p>PhD student,
+              <br><a href="http://www.nii.ac.jp/graduate/en/">Department of Informatics,</a>
+              <br><a href="http://www.soken.ac.jp/en/rcourse/hukugoh/">School of Multidisciplinary Sciences,</a>
+              <br><a href="http://www.soken.ac.jp/en/">SOKENDAI (The Graduate University for Advanced Studies)</a>
+            </p>
+          </div>
+          <div>
+            <p class="h2Size small-margin-top">2010 - 2014</p>
+            <p>Bachelor of Engineering,
+              <br><a href="http://en.cs.ustc.edu.cn">Computer Science and Technology,</a>
+              <br><a href="http://en.ustc.edu.cn">University of Science and Technology of China</a>
+            </p>
+          </div>
+        </section>
+        <hr>
+        <section class="section" id="research">
+          <h2>Research</h2>
+          <p class="p-justify">
+My current research is to make practical use of <em>putback-based <a href="http://bx-community.wikidot.com/" target="_blank">bidirectional transformations</a></em> (BX for short), which can serve as an elegant approach to synchronising data in different formats.
+In particular, I am focusing on the synchronisation problem between the <span data-toggle="tooltip" title="your code snippet" class="hovermouse">program text</span> and its <span data-toggle="tooltip" title="usually an abstract syntax tree (AST)" class="hovermouse">abstract syntax representation.</span>
+I am developing a declarative domain specific language – BiYacc – to help users easily write a single &amp; simple program denoting both a parser and a <span data-toggle="tooltip" title="a printer which can reflect modification in an AST back to program text while keeping other parts unchanged" class="hovermouse">reflective printer</span> consistent with each other.
+BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_blank"><span data-toggle="tooltip" title="Bidirectional Generic Update Language" class="hovermouse">BiGUL</span></a>, a robust underlying system served for bidirectional programming formerly created in our lab.
+  </p>
+        </section>
+
+        <hr>
+        <section class="section" id="activities">
+          <h2>Academic activities</h2>
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#sle2016">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[SLE 2016]</span>
+                <br><span>“Parsing and Reflective Printing, Bidirectionally”</span>
+                <br><span>Zirun Zhu, Yongzhe Zhang, Hsiang-Shang Ko, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="sle2016" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper</span>
+                    <span class="float-right">SLE 2016</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in one single program, with their consistency guaranteed automatically.</p>
+<p>Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can reflect the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
+<p>To address these needs, we propose a domain-specific language BiYacc, whose programs denote both a parser and a reflective printer for an unambiguous context-free grammar. BiYacc is based on the theory of bidirectional transformations, which helps to guarantee by construction that the pairs of parsers and reflective printers generated by BiYacc are consistent. We show that BiYacc is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s “resugaring”, simple refactoring, and language evolution.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/sle2016.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+            </div>
+          </div> <!-- end row -->
+
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#flops2016">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[FLOPS 2016 (poster presentation)]</span>
+                <br><span>“BiYacc: Roll Your Parser and Reflective Printer into One.”</span>
+                <br><span>Zirun Zhu, Yongzhe Zhang</span></p>
+              </div>
+
+              <div id="flops2016" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Poster presentation </span>
+                    <span class="float-right">FLOPS 2016</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately. This leads to a maintenance problem: as a language evolves, both its parser and printer need to be revised and kept consistent, which is a routine but error-prone task.</p>
+<p>To address the problem, we propose a new domain-specific language BiYacc, whose programs denote both a parser and a “reflective” printer for synchronising the concrete and abstract representations. BiYacc is based on the theory of bidirectional transformations, which guarantees that the pairs of parsers and printers generated by BiYacc are always consistent in a precise sense. The “reflective” printer generated from a BiYacc program is distinct from traditional printers: it takes not only an abstract syntax tree (AST) but also a concrete syntax tree (CST), and produces an updated CST into which information from the AST is properly embedded. Internally, BiYacc is implemented in terms of BiGUL, a core bidirectional programming language which has been formally proved correct and implemented as a Haskell library. The consistency of parsers and printers is thus derived from the correctness of BiGUL for free.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/flops2016poster.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">poster</button></a>
+              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+            </div>
+          </div> <!-- end row -->
+
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#bx2015">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[BX 2015]</span>
+                <br><span>"BiYacc: Roll Your Parser and Reflective Printer into One."
+                <br>Zirun Zhu, Hsiang-Shang Ko, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="bx2015" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Tool paper</span>
+                    <span class="float-right">BX 2015</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Language designers usually need to implement parsers and printers. Despite being two related programs, in practice they are designed and implemented separately. This approach has an obvious disadvantage: as a language evolves, both its parser and printer need to be separately revised and kept synchronised. Such tasks are routine but complicated and error-prone. To facilitate these tasks, we propose a language called BiYacc, whose programs denote both a parser and a printer. In essence, BiYacc is a domain-specific language for writing putback-based bidirectional transformations — the printer is a putback transformation, and the parser is the corresponding get transformation. The pairs of parsers and printers generated by BiYacc are thus always guaranteed to satisfy the usual round-trip properties. The highlight that distinguishes this reflective printer from others is that the printer — being a putback transformation — accepts not only an abstract syntax tree but also a string, and produces an updated string consistent with the given abstract syntax tree. We can thus make use of the additional input string, with mechanisms such as simultaneous pattern matching on the view and the source, to provide users with full control over the printing-strategies.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="http://ceur-ws.org/Vol-1396/p43-zhu.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+            </div>
+          </div> <!-- end row -->
+
+
+        </section>
+        <hr>
+        <section class="section" id="contact">
+          <h2>Contact</h2>
+          <p>
+            <a href="http://www.prg.nii.ac.jp">Programming Research Lab, Room 1611,</a>
+            <br><a href="http://www.nii.ac.jp/en/">National Institute of Informatics,</a>
+            <br>2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan</p>
+          <p>Email:
+            <script>
+            var z = "z"; var h = "h"; var u = "u"; var n = "n";
+            var i = "i"; var a = "a"; var c = "c"; var j = "j"; var p = "p";
+            document.write('<a href="' + 'ma' + 'il' + 'to:' + z + h + u + '@' + n + i + i + '.' + a + c + '.' + j + p + '"' + ' ' + ' > ' + z + h + u + '@' + n + i + i + '.' + a + c + '.' + j + p + '</a > ');
+            </script>
+          </p>
+        </section>
+        <hr>
+        <section class="section" id="reference">
+          <h2>Reference</h2>
+          <p><a href="http://research.nii.ac.jp/~hu/">Prof Zhenjiang Hu (advisor)</a></p>
+          <p>Department of Informatics,
+            <br>School of Multidisciplinary Sciences,
+            <br>SOKENDAI (The Graduate University for Advanced Studies)</p>
+        </section>
+
+        <footer>
+          <hr>
+          <div class="footer">
+            <p>The site is built upon bootstrap and google fonts. Special thanks to doge over social networks.</p>
+          </div>
+        </footer>
+      </div>
+      <!-- end div right-col -->
+    </div>
+    <!-- end div row... -->
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
