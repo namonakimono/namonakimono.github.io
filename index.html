@@ -81,6 +81,80 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
 
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#popl2019draft">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[POPL 2019 (draft, rejected)]</span>
+                <br><span>“Retentive Lenses”</span>
+                <br><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="popl2019draft" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper (draft)</span>
+                    <span class="float-right">Rejected by POPL 2019</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Based on Foster et al.'s [2007] lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers.
+The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems.
+While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information,
+since Hippocraticness only requires that the source be unchanged if the view is not modified. Thus nothing about retaining is guaranteed when the view is changed.
+</p>
+<p>To address this problem, we propose an extension of the original lenses, called <em>retentive lenses</em>, satisfying a new Retentiveness law which can guarantee that if parts of the view are unchanged, then the corresponding parts of the source are retained as well.
+As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations.
+We prove that the pair of <em>get</em> and <em>put</em> functions generated from a program in our DSL forms a retentive lens.
+We study the practical use of retentive lenses by implementing in our DSL a synchroniser between concrete and abstract syntax trees for a small subset of Java, and demonstrate that Retentiveness helps to enforce the retaining of comments and syntactic sugar in code refactoring.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/popl2019(rejected).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="src/popl2019proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
+            </div>
+          </div> <!-- end row rejected by popl 2019 -->
+
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#icfp2018draft">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[ICFP 2018 (draft, rejected)]</span>
+                <br><span>“Retentive Lenses”</span>
+                <br><span>Zirun Zhu, Hsiang-Shang Ko, Zhixuan Yang, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="icfp2018draft" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper (draft)</span>
+                    <span class="float-right">Rejected by ICFP 2018</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Researchers in the field of bidirectional transformations have studied data synchronisation for a long time and proposed various properties, of which <em>well-behavedness</em> is the most fundamental.
+  However, well-behavedness is not enough to characterise the result of an update (performed by <em>put</em>),
+  regarding what information should be retained in the updated source.
+  The root cause is that the property, Hippocraticness, for guaranteeing the retention of source information is too ‘global’, only requiring that the whole source should be unchanged if the whole view is.
+</p>
+<p>
+  In this paper we propose a new property <em>retentiveness</em>, which enables us to directly reason about the retention of source information locally.
+  Central to our formulation of retentiveness is the notion of links, which are used to relate fragments of sources and views.
+  These links are passed as additional input to the extended <em>put</em> function, which produces a new source in a way that preserves all the source fragments attached to the links.
+  We validate the feasibility of retentiveness by designing a domain-specific language (DSL) supporting mutually recursive algebraic data types.
+  We prove that any program written in our DSL gives rise to a pair of retentive <em>get</em> and <em>put</em>.
+  We show the usefulness of retentiveness by presenting examples in two different research areas: resugaring and code refactoring.
+</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/icfp2018(rejected).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="src/icfp2018proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
+            </div>
+          </div> <!-- end row rejected by icfp 2018 -->
+
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
               <div data-toggle="collapse" data-target="#sle2016">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
                 <span>[SLE 2016]</span>
@@ -105,7 +179,7 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
               <a href="papers/sle2016.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
               <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
-          </div> <!-- end row -->
+          </div> <!-- end row sle2016 -->
 
 
           <div class="row">
