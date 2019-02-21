@@ -79,6 +79,35 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
         <section class="section" id="activities">
           <h2>Academic activities</h2>
 
+
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#ngcUnderReview">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[NGC (draft, under review)]</span>
+                <br><span>“Bidirectional Parsing and Reflective Printing for Fully Disambiguated Grammars”</span>
+                <br><span>Zirun Zhu, Hsiang-Shang Ko, Yongzhe Zhang, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="ngcUnderReview" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper (draft)</span>
+                    <span class="float-right">Under the review of NGC</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Language designers usually need to implement parsers and printers. Despite being two closely related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in a single program, with their consistency guaranteed automatically. Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can propagate the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
+<p>To address these needs, we propose a domain-specific language BIYACC, whose programs denote both a parser and a reflective printer for a fully disambiguated context- free grammar. BIYACC is based on the theory of bidirectional transformations, which helps to guarantee by construction that the generated pairs of parsers and reflective printers are consistent. Handling grammatical ambiguity is particularly challenging: we propose an approach based on generalised parsing and disambiguation filters, which produce all the parse results and (try to) select the only correct one in the parsing direction; the filters are carefully bidirectionalised so that they also work in the printing direction and do not break the consistency between the parsers and reflective printers. We show that BIYACC is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s ‘resugaring’, simple refactoring, and language evolution.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/ngc(under).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+            </div>
+          </div> <!-- end row ngcUnderReview -->
+
+
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
               <div data-toggle="collapse" data-target="#popl2019draft">
@@ -177,7 +206,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
 
             <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
               <a href="papers/sle2016.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
-              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+              <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
           </div> <!-- end row sle2016 -->
 
@@ -205,7 +234,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
 
             <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
               <a href="papers/flops2016poster.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">poster</button></a>
-              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+              <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
           </div> <!-- end row -->
 
@@ -232,7 +261,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
 
             <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
               <a href="http://ceur-ws.org/Vol-1396/p43-zhu.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
-              <a href="http://www.prg.nii.ac.jp/project/biyacc.html" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
+              <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
           </div> <!-- end row -->
 
