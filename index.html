@@ -107,6 +107,39 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
             </div>
           </div> <!-- end row ngcUnderReview -->
 
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#popl2019draft">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[ICFP 2019 (draft, under review)]</span>
+                <br><span>“Retentive Lenses”</span>
+                <br><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="popl2019draft" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper (draft)</span>
+                    <span class="float-right">Under the review of ICFP 2019</span></h3>
+                </div>
+                <div class="panel-body">
+<p>Based on Foster et al.'s [2007] lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers.
+The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems.
+While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information,
+since Hippocraticness only requires that the source be unchanged if the view is not modified. Thus nothing about retaining is guaranteed when the view is changed.
+</p>
+<p>To address this problem, we propose an extension of the original lenses, called <em>retentive lenses</em>, satisfying a new Retentiveness law which can guarantee that if parts of the view are unchanged, then the corresponding parts of the source are retained as well.
+As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations.
+We prove that the pair of <em>get</em> and <em>put</em> functions generated from a program in our DSL forms a retentive lens.
+We study the practical use of retentive lenses by implementing in our DSL a synchroniser between concrete and abstract syntax trees for a small subset of Java, and demonstrate that Retentiveness helps to enforce the retaining of comments and syntactic sugar in code refactoring.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/icfp2019(draft).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="src/icfp2019proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
+            </div>
+          </div> <!-- end row icfp2019UnderReview -->
 
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
