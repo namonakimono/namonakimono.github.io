@@ -24,6 +24,14 @@ body {
   color: rgba(0,0,0,1);
 }
 
+h2 {
+  padding-top: 1ex;
+}
+
+h4 {
+  padding-top: 2ex;
+}
+
 #leftCol{
   font-size: 1.2em;
 }
@@ -80,6 +88,10 @@ a{
   text-align: justify;
   hyphens: auto;
 }
+
+.small-caps{
+  font-variant: small-caps;
+};
 
 /* tricks */
 .v-center {

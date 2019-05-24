@@ -1,35 +1,6 @@
-// $(document).ready(function () {
-//   setFontSize();
-// });
-
-function setFontSize() {
-  // var height = $(window).height();
-  // var width  = $(window).width();
-  // if (height / width > 1.3 ) {
-  //   document.body.style.fontSize = "1.4vh";
-  // }
-  // else if (width / height > 2 ){
-  //   document.body.style.fontSize = "2.8vh";
-  // }
-  // else if (height > 900) {
-  //   document.body.style.fontSize = "2.2vh";
-  // }
-  // else if (height > 700) {
-  //   document.body.style.fontSize = "2.4vh";
-  // }
-  // else {
-  //   document.body.style.fontSize = "2.4vh";
-  // }
-}
-
-// $(window).on('resize', function(){
-//    setFontSize();
-// });
-
-
-
 function bomb(){
   flake.init();
+  setPhDAdvisor();
 }
 
 var flakeIntervalID;
@@ -106,3 +77,10 @@ var flake = {
 };
 
 
+function setPhDAdvisor() {
+  var ref = $("#reference");
+  ref.empty();
+  var advisor = "<p><a href='https://josh-hs-ko.github.io'>Hsiang-Shang Ko</a></p>";
+  var addr = "<p>Assistant Professor by Special Appointment<br>National Institute of Informatics</p>";
+  ref.append("<h2>PhD Advisor</h2>", advisor, addr);
+}
