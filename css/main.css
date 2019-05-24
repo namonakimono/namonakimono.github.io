@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-
 @font-face{
   font-family: doge;
   src: url("../font/DogeSans-Regular.otf");
@@ -16,6 +14,8 @@
 }
 
 body {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.025em;
   position: relative;
   overflow: auto;
   font-family: 'Roboto Slab', serif;
