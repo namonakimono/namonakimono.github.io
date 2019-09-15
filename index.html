@@ -14,6 +14,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="css/navbar-fixed-side.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300&display=swap" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <!-- my css and javascript -->
@@ -25,7 +26,7 @@
   </script>
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#navbar" onload="init()">
 
   <div class="container-fluid">
     <div class="row">
@@ -34,7 +35,46 @@
         <div class="navbar navbar-inverse navbar-fixed-side no-border" id="navbar">
            <div class="navbar-header">
             <!-- <a class="navbar-brand nav-headline" href="#">Zirun Zhu <span class="navhead">'s Homepage</span></a> -->
-            <div class="v-centerA" style="color: #161616;"><p>This is only a black wall.</p></div>
+            <div id="navbar-blackboard">
+              <p>
+    ひとりでもゆくよ
+<br>例え辛くても
+<br>きみと見た夢は
+<br>必ず持ってくよ
+<br>きみとがよかった
+<br>ほかの誰でもない
+<br>でも目覚めた朝
+<br>きみは居ないんだね
+<br>
+<br>どこまでもゆくよ
+<br>ここで知ったこと
+<br>幸せという夢を
+<br>叶えてみせるよ
+<br>きみと離れても
+<br>どんなに遠くなっても
+<br>新しい朝に
+<br>あたしは生きるよ
+<br>
+<br>ひとりでもゆくよ
+<br>死にたくなっても
+<br>声が聞こえるよ
+<br>死んではいけないと
+<br>例え辛くても
+<br>寂しさに泣いても
+<br>心の奥には
+<br>温もりを感じるよ
+<br>
+<br>巡って流れて
+<br>時は移ろいだ
+<br>もう何があったか
+<br>思い出せないけど
+<br>目を閉じてみれば
+<br>誰かの笑い声
+<br>なぜかそれが
+<br>今一番の宝物
+
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -49,15 +89,16 @@
           </div>
           <h2>Education</h2>
           <div>
-            <p class="h2Size">2014 - present</p>
+            <p class="h2Size">2014–present</p>
             <p>PhD student,
               <br><a href="http://www.nii.ac.jp/graduate/en/">Department of Informatics,</a>
               <br><a href="https://www.soken.ac.jp/en/rcourse/multidisciplinary_science/">School of Multidisciplinary Sciences,</a>
-              <br><a href="https://www.soken.ac.jp/en/">SOKENDAI (The Graduate University for Advanced Studies)</a>
+              <br><a href="https://www.soken.ac.jp/en/">SOKENDAI (The Graduate University for Advanced Studies)</a> and
+              <br><a href="https://www.nii.ac.jp/en/">National Institute of Informatics</a>
             </p>
           </div>
           <div>
-            <p class="h2Size small-margin-top">2010 - 2014</p>
+            <p class="h2Size small-margin-top">2010–2014</p>
             <p>Bachelor of Engineering,
               <br><a href="http://en.cs.ustc.edu.cn">Computer Science and Technology,</a>
               <br><a href="http://en.ustc.edu.cn">University of Science and Technology of China</a>
@@ -65,19 +106,40 @@
           </div>
         </section>
         <hr>
+
         <section class="section" id="research">
-          <h2>Research</h2>
+          <h2>Research (Interests and Projects)</h2>
           <p class="p-justify">
-My current research is to make practical use of <em>putback-based <a href="http://bx-community.wikidot.com/" target="_blank">bidirectional transformations</a></em> (BX for short), which can serve as an elegant approach to synchronising data in different formats.
-In particular, I am focusing on the synchronisation problem between the <span data-toggle="tooltip" title="your code snippet" class="hovermouse">program text</span> and its <span data-toggle="tooltip" title="usually an abstract syntax tree (AST)" class="hovermouse">abstract syntax representation.</span>
-I am developing a declarative domain specific language – BiYacc – to help users easily write a single &amp; simple program denoting both a parser and a <span data-toggle="tooltip" title="a printer which can reflect modification in an AST back to program text while keeping other parts unchanged" class="hovermouse">reflective printer</span> consistent with each other.
-BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_blank"><span data-toggle="tooltip" title="Bidirectional Generic Update Language" class="hovermouse">BiGUL</span></a>, a robust underlying system served for bidirectional programming formerly created in our lab.
-  </p>
+I am interested in functional programming languages and designing domain-specific languages (DSLs) for solving practical problems, by taking advantage of relevant theoretical research. I enjoy metaprogramming and source-to-source code generation, which are the daily work required by my doctoral research—<em><a href="http://bx-community.wikidot.com/" target="_blank">bidirectional transformations</a></em> (BX), which are an elegant approach to synchronising data in different formats. In particular, I am focusing on the synchronisation problem between the <span data-toggle="tooltip" title="your code snippet" class="hovermouse">program text</span> and its <span data-toggle="tooltip" title="usually an abstract syntax tree (AST)" class="hovermouse">abstract syntax representation.</span>
+          </p>
+
+          <h4>Bidirectional Parsing and Printing (<span class="small-caps">BiYacc</span>)</h4>
+          <p class="p-justify">
+As an application of BX, I developed a DSL, <span class="small-caps">BiYacc</span>, which can generate a pair of parser and printer that are consistent with each other from a single specification, for synchronising program text and an abstract syntax tree (AST) that is possibly modified, for instance, by some refactoring algorithm, from the one directly parsed from the program text. Different from conventional methods, parser and printer pairs produced by <span class="small-caps">BiYacc</span> will try to preserve comments, layouts, and other syntactic objects during the synchronisation. <span class="small-caps">BiYacc</span> has been adopted as a part of <a href="http://ceur-ws.org/Vol-1827/paper7.pdf" target="_blank">the system</a> (developed by Daisuke Kinoshita and Keisuke Nakano) to synchronise <span class="small-caps">Coq</span> functions and their corresponding <span class="small-caps">Ocaml</span> programs.
+          </p>
+
+          <h4>Grammar Disambiguation (Bi-filters)</h4>
+          <p class="p-justify">
+Conventional approaches are to develop disambiguation treatments either for the parsing direction or the printing direction. As a result, we do not know if two arbitrarily picked treatments, one for the parsing direction and the other for the printing direction, will work in harmony, i.e. does not break the consistency between the parser and printer (plus disambiguation). In response to the problem, based on generalised parsing and (unidirectional) filters, I propose bidirectionalised filters (bi-filters) which work both in the parsing direction and in the printing direction; bi-filters satisfy bi-filter laws and will not affect the consistency of the whole parsing and printing process. I have designed bi-filter directives and integrated the functionality into <span class="small-caps">BiYacc</span>.</p>
+
+          <h4>Retentive Printing (<span class="small-caps">Retentive Lenses</span>)</h4>
+          <p class="p-justify">
+When synchronising program text and an AST that is possibly modified, for instance, by some refactoring algorithm, from the one directly parsed from the program text, the preservation of comments, layouts, and syntactic objects is not always guaranteed, even for tools like <span class="small-caps">BiYacc</span>. To remedy the situation, I propose retentive lenses (for BX in general), which satisfy Retentiveness and theoretically guarantee information retention during synchronisation on demand.</p>
+
+          <h4>Document Synchronisation (<span class="small-caps">BiPandoc</span>)</h4>
+          <p class="p-justify">
+<span class="small-caps">Pandoc</span> is a famous document converter. As a real-world application demonstrating the use of BX, together with Zhixuan Yang, I develop the prototype of <span class="small-caps">BiPandoc</span>, i.e. bidirectional <span class="small-caps">Pandoc</span>, that synchronises documents in <span class="small-caps">HTML</span> and <span class="small-caps">Markdown</span> formats.
+          </p>
+
+          <h4>Encryption for Fun</h4>
+          <p class="p-justify">
+<a href="http://enc.yozora.moe">Encrypt your real and fake text into one.</a>
+          </p>
         </section>
 
         <hr>
         <section class="section" id="activities">
-          <h2>Academic activities</h2>
+          <h2>Papers and Posters</h2>
 
 
           <div class="row">
@@ -85,7 +147,7 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
               <div data-toggle="collapse" data-target="#ngcUnderReview">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
                 <span>[NGC (draft, under review)]</span>
-                <br><span>“Bidirectional Parsing and Reflective Printing for Fully Disambiguated Grammars”</span>
+                <br><span>Bidirectional Parsing and Reflective Printing for Fully Disambiguated Grammars</span>
                 <br><span>Zirun Zhu, Hsiang-Shang Ko, Yongzhe Zhang, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
               </div>
 
@@ -107,20 +169,19 @@ BiYacc is based on <a href="http://www.prg.nii.ac.jp/project/bigul/" target="_bl
             </div>
           </div> <!-- end row ngcUnderReview -->
 
-
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
               <div data-toggle="collapse" data-target="#popl2019draft">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
-                <span>[POPL 2019 (draft, rejected)]</span>
-                <br><span>“Retentive Lenses”</span>
+                <span>[ICFP 2019 (draft, rejected)]</span>
+                <br><span>Retentive Lenses</span>
                 <br><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
               </div>
 
               <div id="popl2019draft" class="collapse panel panel-info">
                 <div class="panel-heading">
                 <h3 class="panel-title"><span>Research paper (draft)</span>
-                    <span class="float-right">Rejected by POPL 2019</span></h3>
+                    <span class="float-right">Under the review of ICFP 2019</span></h3>
                 </div>
                 <div class="panel-body">
 <p>Based on Foster et al.'s [2007] lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers.
@@ -137,10 +198,10 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
             </div>
 
             <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
-              <a href="papers/popl2019(rejected).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
-              <a href="src/popl2019proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
+              <a href="papers/icfp2019(draft).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="src/icfp2019proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
             </div>
-          </div> <!-- end row rejected by popl 2019 -->
+          </div> <!-- end row icfp2019UnderReview -->
 
 
           <div class="row">
@@ -148,7 +209,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
               <div data-toggle="collapse" data-target="#icfp2018draft">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
                 <span>[ICFP 2018 (draft, rejected)]</span>
-                <br><span>“Retentive Lenses”</span>
+                <br><span>Retentive Lenses</span>
                 <br><span>Zirun Zhu, Hsiang-Shang Ko, Zhixuan Yang, and Zhenjiang Hu</span></p>
               </div>
 
@@ -187,7 +248,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
               <div data-toggle="collapse" data-target="#sle2016">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
                 <span>[SLE 2016]</span>
-                <br><span>“Parsing and Reflective Printing, Bidirectionally”</span>
+                <br><span>Parsing and Reflective Printing, Bidirectionally</span>
                 <br><span>Zirun Zhu, Yongzhe Zhang, Hsiang-Shang Ko, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
               </div>
 
@@ -216,7 +277,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
               <div data-toggle="collapse" data-target="#flops2016">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
                 <span>[FLOPS 2016 (poster presentation)]</span>
-                <br><span>“BiYacc: Roll Your Parser and Reflective Printer into One.”</span>
+                <br><span>BiYacc: Roll Your Parser and Reflective Printer into One.</span>
                 <br><span>Zirun Zhu, Yongzhe Zhang</span></p>
               </div>
 
@@ -284,11 +345,11 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
         </section>
         <hr>
         <section class="section" id="reference">
-          <h2>Reference</h2>
-          <p><a href="http://research.nii.ac.jp/~hu/">Prof Zhenjiang Hu (advisor)</a></p>
-          <p>Department of Informatics,
-            <br>School of Multidisciplinary Sciences,
-            <br>SOKENDAI (The Graduate University for Advanced Studies)</p>
+          <h2>PhD Advisor</h2>
+          <p><a href="http://research.nii.ac.jp/~hu/">Zhenjiang Hu</a></p>
+          <p>Professor at Peking University
+          <br>Professor by Special Appointment at National Institute of Informatics
+          <br>Visiting Professor at SOKENDAI (The Graduate University for Advanced Studies)</p>
         </section>
 
         <footer>
