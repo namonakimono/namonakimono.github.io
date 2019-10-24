@@ -36,44 +36,7 @@
            <div class="navbar-header">
             <!-- <a class="navbar-brand nav-headline" href="#">Zirun Zhu <span class="navhead">'s Homepage</span></a> -->
             <div id="navbar-blackboard">
-              <p>
-    ひとりでもゆくよ
-<br>例え辛くても
-<br>きみと見た夢は
-<br>必ず持ってくよ
-<br>きみとがよかった
-<br>ほかの誰でもない
-<br>でも目覚めた朝
-<br>きみは居ないんだね
-<br>
-<br>どこまでもゆくよ
-<br>ここで知ったこと
-<br>幸せという夢を
-<br>叶えてみせるよ
-<br>きみと離れても
-<br>どんなに遠くなっても
-<br>新しい朝に
-<br>あたしは生きるよ
-<br>
-<br>ひとりでもゆくよ
-<br>死にたくなっても
-<br>声が聞こえるよ
-<br>死んではいけないと
-<br>例え辛くても
-<br>寂しさに泣いても
-<br>心の奥には
-<br>温もりを感じるよ
-<br>
-<br>巡って流れて
-<br>時は移ろいだ
-<br>もう何があったか
-<br>思い出せないけど
-<br>目を閉じてみれば
-<br>誰かの笑い声
-<br>なぜかそれが
-<br>今一番の宝物
-
-              </p>
+              White
             </div>
           </div>
         </div>
@@ -141,6 +104,30 @@ When synchronising program text and an AST that is possibly modified, for instan
         <section class="section" id="activities">
           <h2>Papers and Posters</h2>
 
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+              <div data-toggle="collapse" data-target="#esop2020draft">
+                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
+                <span>[ESOP 2020 (draft, under review)]</span>
+                <br><span>Retentive Lenses</span>
+                <br><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
+              </div>
+
+              <div id="esop2020draft" class="collapse panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title"><span>Research paper (draft)</span>
+                    <span class="float-right">Under the review of ESOP 2020</span></h3>
+                </div>
+                <div class="panel-body">
+                  <p>Based on Foster et al.’s lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers. The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems. While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information: Hippocraticness only requires that the source be unchanged if the view is not modified, and nothing about information retention is guaranteed when the view is changed. To address the problem, we propose an extension of the original lenses, called retentive lenses, which satisfy a new Retentiveness law guaranteeing that if parts of the view are unchanged, then the corresponding parts of the source are retained as well. As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations; we prove that the pair of get and put functions generated from a program in our DSL forms a retentive lens. We demonstrate the practical use of retentive lenses and the DSL by presenting case studies on code refactoring, Pombrio and Krishnamurthi’s resugaring, and XML synchronisation.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
+              <a href="papers/esop2020.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="src/esop2020proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
+            </div>
+          </div> <!-- end row esop 2020 -->
 
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
@@ -157,8 +144,8 @@ When synchronising program text and an AST that is possibly modified, for instan
                     <span class="float-right">Under the review of NGC</span></h3>
                 </div>
                 <div class="panel-body">
-<p>Language designers usually need to implement parsers and printers. Despite being two closely related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in a single program, with their consistency guaranteed automatically. Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can propagate the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
-<p>To address these needs, we propose a domain-specific language BIYACC, whose programs denote both a parser and a reflective printer for a fully disambiguated context- free grammar. BIYACC is based on the theory of bidirectional transformations, which helps to guarantee by construction that the generated pairs of parsers and reflective printers are consistent. Handling grammatical ambiguity is particularly challenging: we propose an approach based on generalised parsing and disambiguation filters, which produce all the parse results and (try to) select the only correct one in the parsing direction; the filters are carefully bidirectionalised so that they also work in the printing direction and do not break the consistency between the parsers and reflective printers. We show that BIYACC is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s ‘resugaring’, simple refactoring, and language evolution.</p>
+                  <p>Language designers usually need to implement parsers and printers. Despite being two closely related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in a single program, with their consistency guaranteed automatically. Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can propagate the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
+                  <p>To address these needs, we propose a domain-specific language BIYACC, whose programs denote both a parser and a reflective printer for a fully disambiguated context- free grammar. BIYACC is based on the theory of bidirectional transformations, which helps to guarantee by construction that the generated pairs of parsers and reflective printers are consistent. Handling grammatical ambiguity is particularly challenging: we propose an approach based on generalised parsing and disambiguation filters, which produce all the parse results and (try to) select the only correct one in the parsing direction; the filters are carefully bidirectionalised so that they also work in the printing direction and do not break the consistency between the parsers and reflective printers. We show that BIYACC is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s ‘resugaring’, simple refactoring, and language evolution.</p>
                 </div>
               </div>
             </div>
@@ -168,79 +155,6 @@ When synchronising program text and an AST that is possibly modified, for instan
               <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
           </div> <!-- end row ngcUnderReview -->
-
-          <div class="row">
-            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-              <div data-toggle="collapse" data-target="#popl2019draft">
-                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
-                <span>[ICFP 2019 (draft, rejected)]</span>
-                <br><span>Retentive Lenses</span>
-                <br><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
-              </div>
-
-              <div id="popl2019draft" class="collapse panel panel-info">
-                <div class="panel-heading">
-                <h3 class="panel-title"><span>Research paper (draft)</span>
-                    <span class="float-right">Under the review of ICFP 2019</span></h3>
-                </div>
-                <div class="panel-body">
-<p>Based on Foster et al.'s [2007] lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers.
-The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems.
-While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information,
-since Hippocraticness only requires that the source be unchanged if the view is not modified. Thus nothing about retaining is guaranteed when the view is changed.
-</p>
-<p>To address this problem, we propose an extension of the original lenses, called <em>retentive lenses</em>, satisfying a new Retentiveness law which can guarantee that if parts of the view are unchanged, then the corresponding parts of the source are retained as well.
-As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations.
-We prove that the pair of <em>get</em> and <em>put</em> functions generated from a program in our DSL forms a retentive lens.
-We study the practical use of retentive lenses by implementing in our DSL a synchroniser between concrete and abstract syntax trees for a small subset of Java, and demonstrate that Retentiveness helps to enforce the retaining of comments and syntactic sugar in code refactoring.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
-              <a href="papers/icfp2019(draft).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
-              <a href="src/icfp2019proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
-            </div>
-          </div> <!-- end row icfp2019UnderReview -->
-
-
-          <div class="row">
-            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-              <div data-toggle="collapse" data-target="#icfp2018draft">
-                <p data-toggle="tooltip" title="click to expand" class="hovermouse">
-                <span>[ICFP 2018 (draft, rejected)]</span>
-                <br><span>Retentive Lenses</span>
-                <br><span>Zirun Zhu, Hsiang-Shang Ko, Zhixuan Yang, and Zhenjiang Hu</span></p>
-              </div>
-
-              <div id="icfp2018draft" class="collapse panel panel-info">
-                <div class="panel-heading">
-                <h3 class="panel-title"><span>Research paper (draft)</span>
-                    <span class="float-right">Rejected by ICFP 2018</span></h3>
-                </div>
-                <div class="panel-body">
-<p>Researchers in the field of bidirectional transformations have studied data synchronisation for a long time and proposed various properties, of which <em>well-behavedness</em> is the most fundamental.
-  However, well-behavedness is not enough to characterise the result of an update (performed by <em>put</em>),
-  regarding what information should be retained in the updated source.
-  The root cause is that the property, Hippocraticness, for guaranteeing the retention of source information is too ‘global’, only requiring that the whole source should be unchanged if the whole view is.
-</p>
-<p>
-  In this paper we propose a new property <em>retentiveness</em>, which enables us to directly reason about the retention of source information locally.
-  Central to our formulation of retentiveness is the notion of links, which are used to relate fragments of sources and views.
-  These links are passed as additional input to the extended <em>put</em> function, which produces a new source in a way that preserves all the source fragments attached to the links.
-  We validate the feasibility of retentiveness by designing a domain-specific language (DSL) supporting mutually recursive algebraic data types.
-  We prove that any program written in our DSL gives rise to a pair of retentive <em>get</em> and <em>put</em>.
-  We show the usefulness of retentiveness by presenting examples in two different research areas: resugaring and code refactoring.
-</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
-              <a href="papers/icfp2018(rejected).pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
-              <a href="src/icfp2018proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
-            </div>
-          </div> <!-- end row rejected by icfp 2018 -->
 
 
           <div class="row">
@@ -258,9 +172,9 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
                     <span class="float-right">SLE 2016</span></h3>
                 </div>
                 <div class="panel-body">
-<p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in one single program, with their consistency guaranteed automatically.</p>
-<p>Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can reflect the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
-<p>To address these needs, we propose a domain-specific language BiYacc, whose programs denote both a parser and a reflective printer for an unambiguous context-free grammar. BiYacc is based on the theory of bidirectional transformations, which helps to guarantee by construction that the pairs of parsers and reflective printers generated by BiYacc are consistent. We show that BiYacc is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s “resugaring”, simple refactoring, and language evolution.</p>
+                  <p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in one single program, with their consistency guaranteed automatically.</p>
+                  <p>Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can reflect the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
+                  <p>To address these needs, we propose a domain-specific language BiYacc, whose programs denote both a parser and a reflective printer for an unambiguous context-free grammar. BiYacc is based on the theory of bidirectional transformations, which helps to guarantee by construction that the pairs of parsers and reflective printers generated by BiYacc are consistent. We show that BiYacc is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s “resugaring”, simple refactoring, and language evolution.</p>
                 </div>
               </div>
             </div>
@@ -287,8 +201,8 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
                     <span class="float-right">FLOPS 2016</span></h3>
                 </div>
                 <div class="panel-body">
-<p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately. This leads to a maintenance problem: as a language evolves, both its parser and printer need to be revised and kept consistent, which is a routine but error-prone task.</p>
-<p>To address the problem, we propose a new domain-specific language BiYacc, whose programs denote both a parser and a “reflective” printer for synchronising the concrete and abstract representations. BiYacc is based on the theory of bidirectional transformations, which guarantees that the pairs of parsers and printers generated by BiYacc are always consistent in a precise sense. The “reflective” printer generated from a BiYacc program is distinct from traditional printers: it takes not only an abstract syntax tree (AST) but also a concrete syntax tree (CST), and produces an updated CST into which information from the AST is properly embedded. Internally, BiYacc is implemented in terms of BiGUL, a core bidirectional programming language which has been formally proved correct and implemented as a Haskell library. The consistency of parsers and printers is thus derived from the correctness of BiGUL for free.</p>
+                  <p>Language designers usually need to implement parsers and printers. Despite being two intimately related programs, in practice they are often designed separately. This leads to a maintenance problem: as a language evolves, both its parser and printer need to be revised and kept consistent, which is a routine but error-prone task.</p>
+                  <p>To address the problem, we propose a new domain-specific language BiYacc, whose programs denote both a parser and a “reflective” printer for synchronising the concrete and abstract representations. BiYacc is based on the theory of bidirectional transformations, which guarantees that the pairs of parsers and printers generated by BiYacc are always consistent in a precise sense. The “reflective” printer generated from a BiYacc program is distinct from traditional printers: it takes not only an abstract syntax tree (AST) but also a concrete syntax tree (CST), and produces an updated CST into which information from the AST is properly embedded. Internally, BiYacc is implemented in terms of BiGUL, a core bidirectional programming language which has been formally proved correct and implemented as a Haskell library. The consistency of parsers and printers is thus derived from the correctness of BiGUL for free.</p>
                 </div>
               </div>
             </div>
@@ -297,7 +211,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
               <a href="papers/flops2016poster.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">poster</button></a>
               <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
-          </div> <!-- end row -->
+          </div> <!-- end row flops 2016 -->
 
 
           <div class="row">
@@ -315,7 +229,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
                     <span class="float-right">BX 2015</span></h3>
                 </div>
                 <div class="panel-body">
-<p>Language designers usually need to implement parsers and printers. Despite being two related programs, in practice they are designed and implemented separately. This approach has an obvious disadvantage: as a language evolves, both its parser and printer need to be separately revised and kept synchronised. Such tasks are routine but complicated and error-prone. To facilitate these tasks, we propose a language called BiYacc, whose programs denote both a parser and a printer. In essence, BiYacc is a domain-specific language for writing putback-based bidirectional transformations — the printer is a putback transformation, and the parser is the corresponding get transformation. The pairs of parsers and printers generated by BiYacc are thus always guaranteed to satisfy the usual round-trip properties. The highlight that distinguishes this reflective printer from others is that the printer — being a putback transformation — accepts not only an abstract syntax tree but also a string, and produces an updated string consistent with the given abstract syntax tree. We can thus make use of the additional input string, with mechanisms such as simultaneous pattern matching on the view and the source, to provide users with full control over the printing-strategies.</p>
+                  <p>Language designers usually need to implement parsers and printers. Despite being two related programs, in practice they are designed and implemented separately. This approach has an obvious disadvantage: as a language evolves, both its parser and printer need to be separately revised and kept synchronised. Such tasks are routine but complicated and error-prone. To facilitate these tasks, we propose a language called BiYacc, whose programs denote both a parser and a printer. In essence, BiYacc is a domain-specific language for writing putback-based bidirectional transformations — the printer is a putback transformation, and the parser is the corresponding get transformation. The pairs of parsers and printers generated by BiYacc are thus always guaranteed to satisfy the usual round-trip properties. The highlight that distinguishes this reflective printer from others is that the printer — being a putback transformation — accepts not only an abstract syntax tree but also a string, and produces an updated string consistent with the given abstract syntax tree. We can thus make use of the additional input string, with mechanisms such as simultaneous pattern matching on the view and the source, to provide users with full control over the printing-strategies.</p>
                 </div>
               </div>
             </div>
@@ -324,7 +238,7 @@ We study the practical use of retentive lenses by implementing in our DSL a sync
               <a href="http://ceur-ws.org/Vol-1396/p43-zhu.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
               <a href="http://biyacc.yozora.moe" target="_blank"><button type="button" class="btn btn-default  sm-width">demo</button></a>
             </div>
-          </div> <!-- end row -->
+          </div> <!-- end row bx 2015-->
 
 
         </section>
