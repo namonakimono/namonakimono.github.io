@@ -6,7 +6,6 @@ function init(){
 
 function bomb(){
   flake.init();
-  setPhDAdvisor();
 }
 
 var flakeIntervalID;
@@ -27,6 +26,7 @@ var flake = {
 
   init: function () {
     if (!flakeInited) {
+      setPhDAdvisor();
       flake.callFontFlakes();
       flakeInited = true;
       $(document.body).css('font-family',"doge, sans-serif");
@@ -34,6 +34,7 @@ var flake = {
       $('#doge-it').css('filter',"invert(100%)");
     }
     else {
+      recoverPhDAdvisor();
       flake.removeAll();
       flakeInited = false;
       $(document.body).css('font-family',"Roboto Slab, serif");
@@ -91,6 +92,13 @@ function setPhDAdvisor() {
   ref.append("<h2>PhD Advisor</h2>", advisor, addr);
 }
 
+function recoverPhDAdvisor() {
+  var ref = $("#reference");
+  ref.empty();
+  var advisor = "<p><a href='http://research.nii.ac.jp/~hu/'>Zhenjiang Hu</a></p>";
+  var addr = "<p>Professor at Peking University<br>Professor by Special Appointment at National Institute of Informatics<br>Visiting Professor at SOKENDAI (The Graduate University for Advanced Studies)</p>";
+  ref.append("<h2>PhD Advisor</h2>", advisor, addr);
+}
 
 function isMobileDevice() {
   var check = false;
