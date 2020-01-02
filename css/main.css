@@ -8,27 +8,54 @@
   background-color: #161616 !important;
 }
 
-
-#navbar{
-  font-size: smaller;
+#navbar-blackboard {
+  text-align: center;
+  color: #161616;
+  margin-top: 125%;
+  margin-left: 45%;
+  position: relative;
+  writing-mode: vertical-rl;
+  font-size: xx-large;
 }
+
+
 
 body {
   font-family: 'Roboto Slab', serif;
   letter-spacing: 0.025em;
   position: relative;
   overflow: auto;
-  font-size: 1.6em;
+  font-size: 14px;
   background-color: #f9f9f9;
   color: rgba(51,51,51,1);
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 h2 {
+  font-size: 2.5rem;
   padding-top: 1ex;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 h4 {
-  padding-top: 2ex;
+  font-size: 1.5rem;
+  padding-top: 1.5ex;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 #leftCol{
@@ -104,13 +131,6 @@ a{
   text-align: center;
 }
 
-#navbar-blackboard {
-  text-align: center;
-  color: #161616;
-  padding-top: 15%;
-  padding-bottom: 15%;
-}
-
 .no-border {
    border: none !important;
 }
@@ -131,3 +151,4 @@ a{
   z-index:10;
   position:block;
 }
+

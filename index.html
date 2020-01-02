@@ -34,9 +34,8 @@
       <div class="col-sm-2 col-md-2 col-lg-2 col-xl-3" id="leftCol">
         <div class="navbar navbar-inverse navbar-fixed-side no-border" id="navbar">
            <div class="navbar-header">
-            <!-- <a class="navbar-brand nav-headline" href="#">Zirun Zhu <span class="navhead">'s Homepage</span></a> -->
             <div id="navbar-blackboard">
-              White
+              也无风雨也无晴
             </div>
           </div>
         </div>
@@ -52,7 +51,7 @@
           </div>
           <h2>Education</h2>
           <div>
-            <p class="h2Size">2014–present</p>
+            <p class="h2Size">2014–2020</p>
             <p>PhD student,
               <br/><a href="http://www.nii.ac.jp/graduate/en/">Department of Informatics,</a>
               <br/><a href="https://www.soken.ac.jp/en/rcourse/multidisciplinary_science/">School of Multidisciplinary Sciences,</a>
@@ -76,25 +75,25 @@
 I am interested in functional programming languages and designing domain-specific languages (DSLs) for solving practical problems, by taking advantage of relevant theoretical research. I enjoy metaprogramming and source-to-source code generation, which are the daily work required by my doctoral research—<em><a href="http://bx-community.wikidot.com/" target="_blank">bidirectional transformations</a></em> (BX), which are an elegant approach to synchronising data in different formats. In particular, I am focusing on the synchronisation problem between the <span data-toggle="tooltip" title="your code snippet" class="hovermouse">program text</span> and its <span data-toggle="tooltip" title="usually an abstract syntax tree (AST)" class="hovermouse">abstract syntax representation.</span>
           </p>
 
-          <h4>Bidirectional Parsing and Printing (<span class="small-caps">BiYacc</span>)</h4>
+          <h3>Bidirectional Parsing and Printing (<span class="small-caps">BiYacc</span>)</h3>
           <p class="p-justify">
 As an application of BX, I developed a DSL, <span class="small-caps">BiYacc</span>, which can generate a pair of parser and printer that are consistent with each other from a single specification, for synchronising program text and an abstract syntax tree (AST) that is possibly modified, for instance, by some refactoring algorithm, from the one directly parsed from the program text. Different from conventional methods, parser and printer pairs produced by <span class="small-caps">BiYacc</span> will try to preserve comments, layouts, and other syntactic objects during the synchronisation. <span class="small-caps">BiYacc</span> has been adopted as a part of <a href="http://ceur-ws.org/Vol-1827/paper7.pdf" target="_blank">the system</a> (developed by Daisuke Kinoshita and Keisuke Nakano) to synchronise <span class="small-caps">Coq</span> functions and their corresponding <span class="small-caps">Ocaml</span> programs.
           </p>
 
-          <h4>Grammar Disambiguation (Bi-filters)</h4>
+          <h3>Grammar Disambiguation (Bi-Filters)</h3>
           <p class="p-justify">
 Conventional approaches are to develop disambiguation treatments either for the parsing direction or the printing direction. As a result, we do not know if two arbitrarily picked treatments, one for the parsing direction and the other for the printing direction, will work in harmony, i.e. does not break the consistency between the parser and printer (plus disambiguation). In response to the problem, based on generalised parsing and (unidirectional) filters, I propose bidirectionalised filters (bi-filters) which work both in the parsing direction and in the printing direction; bi-filters satisfy bi-filter laws and will not affect the consistency of the whole parsing and printing process. I have designed bi-filter directives and integrated the functionality into <span class="small-caps">BiYacc</span>.</p>
 
-          <h4>Retentive Printing (<span class="small-caps">Retentive Lenses</span>)</h4>
+          <h3>Retentive Printing (<span class="small-caps">Retentive Lenses</span>)</h3>
           <p class="p-justify">
 When synchronising program text and an AST that is possibly modified, for instance, by some refactoring algorithm, from the one directly parsed from the program text, the preservation of comments, layouts, and syntactic objects is not always guaranteed, even for tools like <span class="small-caps">BiYacc</span>. To remedy the situation, I propose retentive lenses (for BX in general), which satisfy Retentiveness and theoretically guarantee information retention during synchronisation on demand.</p>
 
-          <h4>Document Synchronisation (<span class="small-caps">BiPandoc</span>)</h4>
+          <h3>Document Synchronisation (<span class="small-caps">BiPandoc</span>)</h3>
           <p class="p-justify">
 <span class="small-caps">Pandoc</span> is a famous document converter. As a real-world application demonstrating the use of BX, together with Zhixuan Yang, I develop the prototype of <span class="small-caps">BiPandoc</span>, i.e. bidirectional <span class="small-caps">Pandoc</span>, that synchronises documents in <span class="small-caps">HTML</span> and <span class="small-caps">Markdown</span> formats.
           </p>
 
-          <h4>Encryption for Fun</h4>
+          <h3>Encryption for Fun</h3>
           <p class="p-justify">
 <a href="https://enc.k331.one">Encrypt your real and fake text into one.</a>
           </p>
@@ -106,17 +105,17 @@ When synchronising program text and an AST that is possibly modified, for instan
 
           <div class="row">
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-              <div data-toggle="collapse" data-target="#esop2020draft">
+              <div data-toggle="collapse" data-target="#retentive-lenses-draft">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
-                <span>[ESOP 2020 (draft, under review)]</span>
+                <span>[???]</span>
                 <br/><span>Retentive Lenses</span>
                 <br/><span>Zirun Zhu, Zhixuan Yang, Hsiang-Shang Ko, and Zhenjiang Hu</span></p>
               </div>
 
-              <div id="esop2020draft" class="collapse panel panel-info">
+              <div id="retentive-lenses-draft" class="collapse panel panel-info">
                 <div class="panel-heading">
-                <h3 class="panel-title"><span>Research paper (draft)</span>
-                    <span class="float-right">Under the review of ESOP 2020</span></h3>
+                <h3 class="panel-title"><span>Research paper</span>
+                    <span class="float-right">Draft</span></h3>
                 </div>
                 <div class="panel-body">
                   <p>Based on Foster et al.’s lenses, various bidirectional programming languages and systems have been developed for helping the user to write correct data synchronisers. The two well-behavedness laws of lenses, namely Correctness and Hippocraticness, are usually adopted as the guarantee of these systems. While lenses are designed to retain information in the source when the view is modified, well-behavedness says very little about the retaining of information: Hippocraticness only requires that the source be unchanged if the view is not modified, and nothing about information retention is guaranteed when the view is changed. To address the problem, we propose an extension of the original lenses, called retentive lenses, which satisfy a new Retentiveness law guaranteeing that if parts of the view are unchanged, then the corresponding parts of the source are retained as well. As a concrete example of retentive lenses, we present a domain-specific language for writing tree transformations; we prove that the pair of get and put functions generated from a program in our DSL forms a retentive lens. We demonstrate the practical use of retentive lenses and the DSL by presenting case studies on code refactoring, Pombrio and Krishnamurthi’s resugaring, and XML synchronisation.</p>
@@ -124,7 +123,7 @@ When synchronising program text and an AST that is possibly modified, for instan
               </div>
             </div>
             <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 v-center">
-              <a href="papers/esop2020.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
+              <a href="papers/retentive.pdf" target="_blank"><button type="button" class="btn btn-default  sm-width">paper</button></a>
               <a href="src/esop2020proto.zip" target="_blank"><button type="button" class="btn btn-default  sm-width">src</button></a>
             </div>
           </div> <!-- end row esop 2020 -->
@@ -133,19 +132,19 @@ When synchronising program text and an AST that is possibly modified, for instan
             <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10 col-xl-10">
               <div data-toggle="collapse" data-target="#ngcUnderReview">
                 <p data-toggle="tooltip" title="click to expand" class="hovermouse">
-                <span>[NGC (draft, under review)]</span>
-                <br/><span>Bidirectional Parsing and Reflective Printing for Fully Disambiguated Grammars</span>
+                <span>[NGCO 2020]</span>
+                <br/><span>Unifying Parsing and Reflective Printing for Fully Disambiguated Grammars</span>
                 <br/><span>Zirun Zhu, Hsiang-Shang Ko, Yongzhe Zhang, Pedro Martins, João Saraiva, and Zhenjiang Hu</span></p>
               </div>
 
               <div id="ngcUnderReview" class="collapse panel panel-info">
                 <div class="panel-heading">
-                <h3 class="panel-title"><span>Research paper (draft)</span>
-                    <span class="float-right">Under the review of NGC</span></h3>
+                <h3 class="panel-title"><span>Research paper</span>
+                    <span class="float-right">NGCO 2020</span></h3>
                 </div>
                 <div class="panel-body">
                   <p>Language designers usually need to implement parsers and printers. Despite being two closely related programs, in practice they are often designed separately, and then need to be revised and kept consistent as the language evolves. It will be more convenient if the parser and printer can be unified and developed in a single program, with their consistency guaranteed automatically. Furthermore, in certain scenarios (like showing compiler optimisation results to the programmer), it is desirable to have a more powerful reflective printer that, when an abstract syntax tree corresponding to a piece of program text is modified, can propagate the modification to the program text while preserving layouts, comments, and syntactic sugar.</p>
-                  <p>To address these needs, we propose a domain-specific language BIYACC, whose programs denote both a parser and a reflective printer for a fully disambiguated context- free grammar. BIYACC is based on the theory of bidirectional transformations, which helps to guarantee by construction that the generated pairs of parsers and reflective printers are consistent. Handling grammatical ambiguity is particularly challenging: we propose an approach based on generalised parsing and disambiguation filters, which produce all the parse results and (try to) select the only correct one in the parsing direction; the filters are carefully bidirectionalised so that they also work in the printing direction and do not break the consistency between the parsers and reflective printers. We show that BIYACC is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s ‘resugaring’, simple refactoring, and language evolution.</p>
+                  <p>To address these needs, we propose a domain-specific language BiYacc, whose programs denote both a parser and a reflective printer for a fully disambiguated context-free grammar. BiYacc is based on the theory of bidirectional transformations, which helps to guarantee by construction that the generated pairs of parsers and reflective printers are consistent. Handling grammatical ambiguity is particularly challenging: We propose an approach based on generalised parsing and disambiguation filters, which produce all the parse results and (try to) select the only correct one in the parsing direction; the filters are carefully bidirectionalised so that they also work in the printing direction and do not break the consistency between the parsers and reflective printers. We show that BiYacc is capable of facilitating many tasks such as Pombrio and Krishnamurthi’s ‘resugaring’, simple refactoring, and language evolution.</p>
                 </div>
               </div>
             </div>
