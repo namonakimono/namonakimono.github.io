@@ -37,7 +37,7 @@ var flake = {
       recoverPhDAdvisor();
       flake.removeAll();
       flakeInited = false;
-      $(document.body).css('font-family',"Roboto Slab, serif");
+      $(document.body).css('font-family',"'Merriweather', serif");
       $('#doge-img').attr('src',"img/doge.jpg");
       $('#doge-it').css('filter',"invert(0%)");
     }

@@ -3,14 +3,13 @@
   src: url("../font/DogeSans-Regular.otf");
 }
 
-
 .navbar-inverse {
-  background-color: #161616 !important;
+  background-color: rgb(40,0,0) !important;
 }
 
 #navbar-blackboard {
   text-align: center;
-  color: #161616;
+  color: rgb(40,0,0);
   margin-top: 125%;
   margin-left: 45%;
   position: relative;
@@ -18,16 +17,19 @@
   font-size: xx-large;
 }
 
-
+::selection {
+  background-color: rgb(236,168,165);
+  color: rgb(253,249,246);
+}
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Merriweather', serif;
   letter-spacing: 0.025em;
   position: relative;
   overflow: auto;
   font-size: 14px;
-  background-color: #f9f9f9;
-  color: rgba(51,51,51,1);
+  background-color: rgb(250,244,238); /*#f9f9f9;*/ /* rgb(240,194,189)*/
+  color: rgb(40,0,0); /*rgb(254,248,246);*/
 }
 
 h1 {
@@ -69,11 +71,12 @@ h5 {
 }
 
 a:hover{
-  background-color:#f3ffff;
+  background-color: rgb(236,168,165);
+  color: rgb(253,249,246);
 }
 
-a{
-  color: rgba(51,51,51,1);
+a {
+  color: rgb(40,0,0);
 }
 
 .small-margin-top{
@@ -81,7 +84,8 @@ a{
 }
 
 .hovermouse:hover {
-  background-color:#f3ffff;
+  background-color: rgb(236,168,165);
+  color: rgb(253,249,246);
   cursor: help;
 }
 
@@ -99,7 +103,7 @@ a{
 }
 
 .navhead {
-  color: #cccccc;
+  color: rgb(40,0,0);
 }
 
 .sm-width {
@@ -107,7 +111,13 @@ a{
 }
 
 .btn-default{
-  background-color: #f9f9f9 !important;
+  background-color: rgb(250,244,238); !important;
+  color: rgb(40,0,0);
+}
+
+.btn-default:hover {
+  background-color: rgb(236,168,165);
+  color: rgb(253,249,246);
 }
 
 .p-justify {
