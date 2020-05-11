@@ -1,8 +1,8 @@
-function init(){
-  if (isMobileDevice()) {
-    $("#leftCol").remove();
-  }
-}
+// function init(){
+//   if (isMobileDevice()) {
+//     $("#leftCol").remove();
+//   }
+// }
 
 function bomb(){
   flake.init();

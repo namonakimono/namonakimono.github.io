@@ -2,7 +2,11 @@
   font-family: doge;
   src: url("../font/DogeSans-Regular.otf");
 }
-
+@media only screen and (max-width: 767px) {
+  #leftCol {
+    display: none;
+  }
+}
 .navbar-inverse {
   background-color: rgb(40,0,0) !important;
 }
@@ -63,7 +67,6 @@ h5 {
 #leftCol{
   font-size: 1.2em;
 }
-
 .h2Size {
   font-size: 1.28em;
   /*font-family: 'Roboto Slab', serif;*/
